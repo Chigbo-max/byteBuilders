@@ -15,27 +15,32 @@ PSEUDO CODE:
 13. perform the calculation in step 11 again and subtract 1 from the result
 14. divide the result of step 12 by the result of step 13
 15. multiply the result of step 14 by the principal(step 2)
-16. display the result as the monthly mortgage payment
+17. if the user enters a principal amount less than zero, do not print result.
 '''
 
 
-principal = int(input("Please enter the amount you wish to borrow: "))
+principal = float(input("Please enter the amount you wish to borrow: "))
 
 duration = float(input("Please enter the duration in years: "))
 
 annual_interest_rate = float(input("Please enter the yearly interest rate: "))
 
+MONTH_IN_YEARS = 12
+
+PERCENTAGE = 0.01
 
 calculated_duration = duration * 12
 	
 calculated_monthly_interest_rate = (annual_interest_rate * 0.01) / 12
+
+if principal < 0:
+	print("sorry you entered an invalid amount, try again")
+else:
 	
-first_monthly_mortgage_payment_calculation = ((calculated_monthly_interest_rate + 1) ** calculated_duration) *calculated_monthly_interest_rate
-	
-second_monthly_mortgage_payment_calculation = ((calculated_monthly_interest_rate + 1) ** calculated_duration)  - 1
-	
-monthly_mortgage_payment = principal * (first_monthly_mortgage_payment_calculation / second_monthly_mortgage_payment_calculation)
+	monthly_mortgage_payment_calculation = (((calculated_monthly_interest_rate + 1) ** calculated_duration) *calculated_monthly_interest_rate)/(((calculated_monthly_interest_rate + 1) 	** calculated_duration)  - 1)
+		
+	monthly_mortgage_payment = principal * (monthly_mortgage_payment_calculation)
 
 
-print("Your monthly payment is $", round(monthly_mortgage_payment, 2));
+	print("Your monthly payment is $", round(monthly_mortgage_payment, 2));
 

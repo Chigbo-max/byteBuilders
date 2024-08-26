@@ -15,6 +15,7 @@ PSEUDO CODE:
 13. perform the calculation in step 11 again and subtract 1 from the result
 14. divide the result of step 12 by the result of step 13
 15. multiply the result of step 14 by the principal(step 2)
+16. display the result as the monthly mortgage payment
 17. if the user enters a principal amount less than zero, do not print result.
 '''
 

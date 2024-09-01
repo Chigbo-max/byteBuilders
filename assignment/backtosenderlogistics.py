@@ -1,7 +1,7 @@
 
 
 
-riders_delivery = int(input("Enter number of successful delivery: "))
+riders_delivery = float(input("Enter number of successful delivery: "))
 
 riders_wage_for_the_day = 0;
 base_pay = 5000;

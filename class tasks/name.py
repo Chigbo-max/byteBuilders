@@ -13,3 +13,7 @@ if name != '':
 else:
 	print("sorry, that's an invalid name, try again")
 
+
+#space is a character
+#python sees an empty space as a character
+

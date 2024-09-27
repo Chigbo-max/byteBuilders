@@ -8,18 +8,18 @@ PSEUDO CODE
 6. display result
 
 """
-amount = 1
-def dollar_to_naira(amount):
-
-	dollar_amount = float(input("Enter amount in dollar: "))
-
-	if (amount <= 0):
-
-		raise ValueError("Invalid number")
+def convert_dollar_to_naira(amount: float)->int:
 
 	DOLLAR_EXCHANGE_RATE = 1550
 
-	dollar_to_naira = DOLLAR_EXCHANGE_RATE * dollar_amount
+	if type(amount) not in [int, float]:
+		return "Invalid input"
+
+	if (amount <= 0):
+		raise ValueError("Invalid number")
+
+
+	dollar_to_naira = DOLLAR_EXCHANGE_RATE * amount
 
 	return dollar_to_naira
 

@@ -2,40 +2,22 @@ first_integer = int(input("Enter first integer: "))
 second_integer = int(input("Enter second integer: "))
 third_integer = int(input("Enter third integer: "))
 
+for number in range(0, 3):
+	int(input("Enter an integer: "))
+
 
 largest_number = 0
 second_largest_number = 0
 smallest_number = 0
 
-
-
-if(first_integer > second_integer and first_integer > third_integer):
-	 largest_number = first_integer
-
-elif(first_integer < second_integer and first_integer > third_integer):
-	 second_largest_number = first_integer
-
-elif(first_integer < second_integer and first_integer < third_integer):
-	 smallest_number = first_integer
-
-elif(second_integer > first_integer and second_integer > third_integer):
-	 largest_number = second_integer
-
-elif(second_integer > first_integer and second_integer < third_integer):
-	 second_largest_number = second_integer
-
-elif(second_integer < first_integer and second_integer < third_integer):
-	 smallest_number = second_integer
-
-
-elif(third_integer > first_integer and third_integer > second_integer):
-	 largest_number = third_integer
-
-elif(third_integer > first_integer and third_integer < second_integer):
-	 second_largest_number = third_integer
-
-elif(third_integer < first_integer and third_integer < second_integer):
-	 smallest_number = third_integer
+if (integer > largest):
+	largest = integer
+			
+elif (integer > secondLargest and integer != largest):
+	secondLargest = integer
+			
+else:
+	smallest = integer
 
 print(smallest_number, second_largest_number, largest_number,)
 

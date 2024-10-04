@@ -1,3 +1,5 @@
+numbers = []
+
 for number in range(1000, 3001):
 		
 	first_number = number % 10
@@ -9,8 +11,8 @@ for number in range(1000, 3001):
 	fourth_number = third_number_extraction % 10
 
 	if(first_number  % 2 == 0 and second_number  % 2 == 0 and third_number  % 2 == 0 and fourth_number % 2 == 0):
-
-		print(f'{number},')
+		numbers.append(number)
+print(numbers)
 		
 	
 	

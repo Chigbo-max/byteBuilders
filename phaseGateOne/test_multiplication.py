@@ -16,7 +16,7 @@ class Multiplication(unittest.TestCase):
 
 	def test_that_display_multiplication_fuction_raise_errors_for_invalid_string_values(self):
 		self.assertRaises(TypeError, multiplication.display_multiplication, "wawu")
-
+		self.assertEqual(multiplication.display_multiplication("", ""), "Invalid input")
 
 
 

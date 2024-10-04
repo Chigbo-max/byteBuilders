@@ -19,14 +19,14 @@ for numbers in range(10):
 	if(numbers % 3 == 0):
 		multiplication *= array[numbers]
 
-	average = array[numbers] // 10
+	average = array[numbers] / 10
 
 	length = length +1
 	
 
 	
 
-
+print(array)
 print(even_sum)
 print(odd_sum)
 print(multiplication)

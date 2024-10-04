@@ -1,24 +1,33 @@
-first_integer = int(input("Enter first integer: "))
-second_integer = int(input("Enter second integer: "))
-third_integer = int(input("Enter third integer: "))
+number_of_elements = int(input("Enter number of elements: "))
 
-for number in range(0, 3):
-	int(input("Enter an integer: "))
+array = []
+
+for _ in range(0,number_of_elements):
+	number = int(input("Enter an integer: "))
+	array.append(number)
+
+print(sorted(array))
+print(sorted(array, reverse = True))
 
 
-largest_number = 0
-second_largest_number = 0
-smallest_number = 0
+number1 = int(input("Enter number: "))
+number2 = int(input("Enter number: "))
+number3 = int(input("Enter number: "))
 
-if (integer > largest):
-	largest = integer
-			
-elif (integer > secondLargest and integer != largest):
-	secondLargest = integer
-			
-else:
-	smallest = integer
+if number1 > number2:
+	number1,number2 = number2,number1
+if number1 > number3:
+	number1, number3 = number3,number1
 
-print(smallest_number, second_largest_number, largest_number,)
+if number2 > number3:
+	number2, number3 = number3, number2
+
+
+
+print(number1, number2, number3)
+
+
+
+
 
 

@@ -10,3 +10,13 @@ last = number // 1000
 sum = thousand + hundred + ten + last
 
 print(sum)
+
+firstNumber = 2
+secondNumber = 3
+for number in range(1, 3):
+	number += firstNumber
+for numbers in range(1,4):
+	numbers += secondNumber
+print(number)
+print(numbers)
+	

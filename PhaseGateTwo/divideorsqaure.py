@@ -1,14 +1,13 @@
 def divide_or_square(number: float)->int:
 
-	NUMBER = 10
+	number = 10
 
-	if (NUMBER < 0): NUMBER = -number;
-
-	if type(NUMBER) not in [float, int]:
+	if (number < 0): number = -number
+	if type(number) not in [float, int]:
 		return "Invalid input"
-	if(NUMBER % 5 == 0):
-		return round(NUMBER  ** 0.5, 2)
+	if(number % 5 == 0):
+		return round(number  ** 0.5, 2)
 	else:
-		return round(NUMBER  % 5, 2)
+		return round(number  % 5, 2)
 	
 	

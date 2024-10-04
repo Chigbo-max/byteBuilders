@@ -10,5 +10,5 @@ def string_integer(firstNumber, secondNumber):
 	
 	word + = text
 	
-	return sum
+	return word
 	

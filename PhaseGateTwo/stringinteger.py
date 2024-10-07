@@ -4,11 +4,11 @@ def string_integer(firstNumber, secondNumber):
 	secondNumber = 2
 	sum = firstNumber + secondNumber
 
-	word = " "
+	word = ""
 
 	text = str(sum)
 	
-	word + = text
+	word += text
 	
 	return word
 	

@@ -7,15 +7,15 @@ def display_random_subtraction():
 	counterr = 0
 	for value in range(10):
 		firstRandom = random.randrange(100)
-		secondRandom = 1 + random.randrange(100)
+		secondRandom = random.randrange(100,200)
 	
 		subtraction = secondRandom - firstRandom
 		
 		try:
-			number = int(input("Enter a number: "))
+			number = int(input(f'What is {secondRandom} - {firstRandom}? '))
 			count+=1
 		except ValueError:
-			print("invalid input: please try again with an integer")
+			print("invalid input: please enter an integer")
 			return
 
 		if(number == subtraction):

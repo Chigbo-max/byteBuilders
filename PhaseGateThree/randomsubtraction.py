@@ -1,5 +1,6 @@
 import random
 
+
 def display_random_subtraction():
 	count = 0
 	counter = 0
@@ -10,8 +11,12 @@ def display_random_subtraction():
 	
 		subtraction = secondRandom - firstRandom
 		
-		number = int(input("Enter a number: "))
-		count+=1
+		try:
+			number = int(input("Enter a number: "))
+			count+=1
+		except ValueError:
+			print("invalid input: please try again with an integer")
+			return
 
 		if(number == subtraction):
 			print("Correct") 

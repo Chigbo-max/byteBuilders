@@ -24,37 +24,42 @@ try:
 	choiceNumber = int(input("Enter a number: "))
 
 	def display_fibonacci(choiceNumber):
-		first_number = 0
-		second_number = 0
-		other_number = 1
-		count = 0
+		if(choiceNumber > 0):
+			first_number = 0
+			second_number = 0
+			other_number = 1			
+			count = 0
 
-		for number in range(0, choiceNumber):
-			first_number = second_number
-			second_number = other_number
-			other_number = first_number + second_number
-			count += 1
-			print(other_number, end=" ")
+			for number in range(-1, choiceNumber):
+				first_number = second_number
+				second_number = other_number
+				other_number = first_number + second_number
+				count += 1
+				print(other_number, end=" ")
+		else:
+			print("Invalid number, enter a number from 1")
 	display_fibonacci(choiceNumber)
 
 
-	input = int(input("Enter a number: "))
+	digit = int(input("Enter a number: "))
 
-	def display_factorial(input):
-		factorial = 1
-		for numbers in range(input, 1, -1):
-			factorial *= numbers
-		print(factorial)
+	def display_factorial(digit):
+		if (digit > 0):
+			factorial = 1
+			for numbers in range(digit, 1, -1):
+				factorial *= numbers
+			print(factorial)
+		else:
+			print("invalid number, enter a number from 1")
 
-	display_factorial(input)
+	display_factorial(digit)
 
 
-
-	def checkBooleanForLetters():
-		letter = 'z'
-		if (letter != 'a' and letter != 'e' and letter != 'i' and letter != 'o' and letter != 'u'): print("false, number is a consonant")
-		else: print("true, number is even")
-	checkBooleanForLetters()
+	letter = input("enter a character: ")
+	def checkBooleanForLetters(letter):
+		if (letter != 'a' and letter != 'e' and letter != 'i' and letter != 'o' and letter != 'u'): print("false")
+		else: print("true, letter is a vowel")
+	checkBooleanForLetters(letter)
 
 except ValueError:
 	print("Invalid input")

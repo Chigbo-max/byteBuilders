@@ -26,16 +26,16 @@ try:
 	def display_fibonacci(choiceNumber):
 		if(choiceNumber > 0):
 			first_number = 0
-			second_number = 0
-			other_number = 1			
-			count = 0
+			second_number = 1
+			#other_number = 0			
 
 			for number in range(-1, choiceNumber):
+				print(first_number, end=" ")
+
+				other_number = first_number + second_number
+
 				first_number = second_number
 				second_number = other_number
-				other_number = first_number + second_number
-				count += 1
-				print(other_number, end=" ")
 		else:
 			print("Invalid number, enter a number from 1")
 	display_fibonacci(choiceNumber)

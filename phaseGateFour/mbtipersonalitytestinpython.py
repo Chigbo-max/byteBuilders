@@ -48,8 +48,6 @@ def get_user_input(survey):
 			else:
 				print("Expected A or B as response. I know this is an error, please retry again")
 	return answers
-#get_user_input(survey)
-
 
 
 def display_introverts_vs_extroverts_results(answers, survey, options, name, personality_type):

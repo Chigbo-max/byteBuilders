@@ -1,94 +1,97 @@
 
 
 		
-cardNumbers = input("Hello, kindly enter card details to verify:  ")
+card_numbers = input("Hello, kindly enter card details to verify:  ")
 
-splittedCardNumbers = list(cardNumbers);
+splitted_card_numbers = list(card_numbers);
 
 
 
-def checkCardLength(splittedCardNumbers):
-	if len(splittedCardNumbers) < 13 or len(splittedCardNumbers) > 16:
+def check_card_length(splitted_card_numbers):
+
+	if len(splitted_card_numbers) < 13 or len(splitted_card_numbers) > 16:
 		print("Invalid number")
 		print("Number must be between 13 and 16")
-checkCardLength(splittedCardNumbers)
+
+check_card_length(splitted_card_numbers)
 
 
-def checkPrefix(splittedCardNumbers):
+def check_prefix(splitted_card_numbers):
 		
-	if (splittedCardNumbers[0] == "4"):
+	if (splitted_card_numbers[0] == "4"):
 		print("Credit Card Type: VisaCard")
-	elif(splittedCardNumbers[0] == "5"):
+	elif(splitted_card_numbers[0] == "5"):
 		print("Credit Card Type: MasterCard")
-	elif(splittedCardNumbers[0] == "3" and numbers[1] == "7"):
+	elif(splitted_card_numbers[0] == "3" and numbers[1] == "7"):
 		print("Credit Card Type: American Express Card")
-	elif(splittedCardNumbers[0] == "6"):
+	elif(splitted_card_numbers[0] == "6"):
 		print("Credit Card Type: Discover Card")
 	else:
 		print("Credit Card Type: Invalid")
 			
-	return splittedCardNumbers
+	return splitted_card_numbers
 
 
-def displayCreditCardLength(splittedCardNumbers):
+def display_credit_card_length(splitted_card_numbers):
 
-	if(len(splittedCardNumbers) >= 13 and len(splittedCardNumbers) <= 16):
+	if(len(splitted_card_numbers) >= 13 and len(splitted_card_numbers) <= 16):
 			
-		print("Credit Card Digit Length: ", len(splittedCardNumbers))
+		print("Credit Card Digit Length: ", len(splitted_card_numbers))
 
-	return splittedCardNumbers			
+	return splitted_card_numbers			
 
-def displayCreditCardNumber(splittedCardNumbers):
+
+def display_credit_card_number(splitted_card_numbers):
 		
 	print("Credit Card Number: ",  end=" ")
 
-	for cardNumbers in splittedCardNumbers:
-		print(cardNumbers, end =" ")
+	for card_numbers in splitted_card_numbers:
+		print(card_numbers, end =" ")
 	print()
 
-	return splittedCardNumbers			
+	return splitted_card_numbers			
 
 
 
-def determineCardValidity(splittedCardNumbers):
+def determine_card_validity(splitted_card_numbers):
 			
-	cardNumbers = [ ]
+	card_numbers = [ ]
 
-	for number in splittedCardNumbers:
-		cardNumbers.append(int(number))
+	for number in splitted_card_numbers:
+		card_numbers.append(int(number))
 		
-	sumOfNumbersLessThanOrEqualToFour = 0
-	sumOfNumbersGreaterThanFour = 0
+	sum_of_numbers_less_than_or_equal_to_four = 0
+	sum_of_numbers_greater_than_four = 0
 
-	for index in range(len(cardNumbers)-1, 0, -1):
-		if(index % 2 == 0 and cardNumbers[index] <= 4):
-			sumOfNumbersLessThanOrEqualToFour +=cardNumbers[index] * 2
+	for index in range(len(card_numbers)-1, 0, -1):
+		if(index % 2 == 0 and card_numbers[index] <= 4):
+			sum_of_numbers_less_than_or_equal_to_four += card_numbers[index] * 2
 			
-	for index in range(len(cardNumbers)-1, 0, -1):
-		if(index % 2 == 0 and cardNumbers[index] > 4 ):
-			sumOfNumbersGreaterThanFour +=(cardNumbers[index] * 2) - 9
+	for index in range(len(card_numbers)-1, 0, -1):
+		if(index % 2 == 0 and card_numbers[index] > 4 ):
+			sum_of_numbers_greater_than_four += (card_numbers[index] * 2) - 9
 
-	total = sumOfNumbersLessThanOrEqualToFour + sumOfNumbersGreaterThanFour
+	total = sum_of_numbers_less_than_or_equal_to_four + sum_of_numbers_greater_than_four
 
 	
-	sumOfOddPositions = 0
+	sum_of_odd_positions = 0
 
-	for index in range(len(cardNumbers) -1, 0, -1):
+	for index in range(len(card_numbers) -1, 0, -1):
 		if(index % 2 != 0):
-			sumOfOddPositions +=cardNumbers[index]
+			sum_of_odd_positions += card_numbers[index]
 
-	sumTotal = sumOfOddPositions + total
+	sum_total = sum_of_odd_positions + total
 
-	if(sumTotal % 10 == 0):
+	if(sum_total % 10 == 0):
 		print("Credit Card Validity Status: Valid")		
 	else:
 
 		print("Credit Card Validity Status: Invalid")
 
-	return cardNumbers			
+	return card_numbers			
 
-checkPrefix(splittedCardNumbers)
-displayCreditCardNumber(splittedCardNumbers)
-displayCreditCardLength(splittedCardNumbers)
-determineCardValidity(splittedCardNumbers)	
+check_prefix(splitted_card_numbers)
+display_credit_card_number(splitted_card_numbers)
+display_credit_card_length(splitted_card_numbers)
+determine_card_validity(splitted_card_numbers)	
 

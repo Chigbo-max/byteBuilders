@@ -12,7 +12,7 @@ public class GuessGame{
 	
 	public static boolean playGame(int input){
 		
-	return input == displayGuess()? true : false;
+		return input == displayGuess()? true : false;
 
 
 		}
@@ -21,10 +21,10 @@ public class GuessGame{
 
 	public static int displayGuess(){
 	
-	int firstInteger = 1 + (int) (100 * Math.random());
-	int secondInteger = 1 + (int) (100 * Math.random());
+		int firstInteger = 1 + (int) (100 * Math.random());
+		int secondInteger = 1 + (int) (100 * Math.random());
 
-	int sumOfTwoIntegers = firstInteger + secondInteger;
+		int sumOfTwoIntegers = firstInteger + secondInteger;
 	
 	return sumOfTwoIntegers;
 	

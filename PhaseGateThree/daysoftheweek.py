@@ -12,11 +12,9 @@ print('''
 
 number = int(input("Enter a number: "))
 
-def display_days_of_the_week(number: int):
-	days = ["Sunday","Monday", "Tcuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+def display_days_of_the_week(number):
+	days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-	if type(number) not in [int]:
-		return "Invalid input"
 	if(number < 0 ):
 		number = -(number)
 

@@ -35,6 +35,12 @@ class Account:
     def get_balance(self):
         return self.balance
 
+    def generate_password(self):
+        pass
+    
+    def set_pin(self):
+        pass
+
 
 
 

@@ -43,6 +43,10 @@ class TestBankAccount(unittest.TestCase):
         # self.tunde.withdraw(Decimal("2000.00"))
         self.assertRaises(ValueError, self.tunde.withdraw, Decimal("-800.00"))
 
+    def test_that_customer_pin_is_not_more_than_4_numbers(self):
+        self.assertEqual(self.tunde.set_pin(), 4)
+
+
 
 
 

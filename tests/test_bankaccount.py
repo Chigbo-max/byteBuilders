@@ -19,8 +19,6 @@ class TestBankAccount(unittest.TestCase):
 
     def test_that_balance_can_deposit(self):
         self.tunde.deposit(Decimal("1200.00"))
-        # self.assertEqual(self.tunde.balance, Decimal("0.00"))
-        # self.tunde.deposit(Decimal("1200.00"))
         self.assertEqual(self.tunde.get_balance(), Decimal("1200.00"))
 
     def test_that_account_cannot_deposit_negative_amount(self):
@@ -32,20 +30,25 @@ class TestBankAccount(unittest.TestCase):
         self.assertEqual(self.tunde.get_balance(), Decimal("0.00"))
         self.tunde.deposit(Decimal("1200.00"))
         self.assertEqual(self.tunde.get_balance(), Decimal("1200.00"))
-
-        self.tunde.withdraw(Decimal("1000.00"))
+        self.tunde.withdraw(Decimal("1000.00"), "1234567834", "2222")
         self.assertEqual(self.tunde.get_balance(), Decimal("200.00"))
 
     def test_that_account_cannot_withdraw_negative_amount(self):
         self.assertEqual(self.tunde.get_balance(), Decimal("0.00"))
-        # self.tunde.deposit(Decimal("1200.00"))
-        # self.assertEqual(self.tunde.get_balance(), Decimal("1200.00"))
-        # self.tunde.withdraw(Decimal("2000.00"))
-        self.assertRaises(ValueError, self.tunde.withdraw, Decimal("-800.00"))
+        self.assertRaises(ValueError, self.tunde.withdraw, Decimal("-800.00"),"1234567823", "2222")
 
-    def test_that_customer_pin_is_not_more_than_4_numbers(self):
-        self.assertEqual(self.tunde.set_pin(), 4)
+    def test_that_errors_are_raised_for_incorrect_pin_length(self):
+        pin = "12345"
+        self.assertRaises(ValueError, self.tunde.set_pin, pin)
 
+    def test_that_errors_are_raised_if_pin_does_not_match(self):
+        pin = "1234"
+        new_pin = "4321"
+        self.assertRaises(ValueError, self.tunde.set_new_pin, pin, new_pin)
+
+
+    def test_that_account_number_raises_error_for_incorrect_account_number_length(self):
+        self.assertRaises(ValueError, self.tunde.withdraw, Decimal("1200.00"),  "1234321234", "2222")
 
 
 

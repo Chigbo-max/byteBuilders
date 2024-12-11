@@ -1,5 +1,5 @@
 import unittest
-from fireDrill.bankaccount import Account
+from bankproj.account import Account
 from decimal import Decimal
 
 class TestBankAccount(unittest.TestCase):

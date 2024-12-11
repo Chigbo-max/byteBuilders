@@ -5,7 +5,7 @@ class Cbn:
     def __init__(self):
         self.banks = []
 
-    def create_bank(self, bank_name):
+    def register_bank(self, bank_name):
         __id = len(self.banks) + 1
         new_bank = Bank(bank_name, __id)
         self.banks.append(new_bank)

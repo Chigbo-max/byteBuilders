@@ -1,18 +1,21 @@
 import random
-from account import Account
+from bankproj.account import Account
 from decimal import Decimal
 
 
 
 class Bank:
 
+    accounts = []
 
     def __init__(self, bank_name, bank_id) -> None:
         self.__id = bank_id
         self.bank_name = bank_name
-        self.accounts = []
 
-    def create_account(self, first_name, last_name, phone, pin):
+    def __init__(self) -> None:
+        pass
+
+    def create_account(self,first_name, last_name, phone, pin):
         account_number = self.generate_account_number()
         name = first_name + " " + last_name
         new_account = Account(name, phone, pin, account_number)
@@ -20,6 +23,9 @@ class Bank:
 
     def get_bank_id(self):
         return self.__id
+
+    def get_number_of_accounts(self):
+        return len(self.accounts)
 
     def generate_account_number(self):
         account_number = str(random.randrange(1_200_000_000, 1_299_999_999))

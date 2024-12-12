@@ -57,7 +57,7 @@ class Account:
     def validate_new_pin(self, new_pin):
         if len(new_pin) != 4:
             raise ValueError('Pin must be 4-digits')
-        self.__pin = new_pin
+
 
 
 

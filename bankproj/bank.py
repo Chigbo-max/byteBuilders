@@ -31,7 +31,6 @@ class Bank:
         return len(self.accounts)
 
     def generate_account_number(self):
-        # account_number = "0000000000"
         account_number = str(random.randrange(1_200_000_000, 1_299_999_999))
         return account_number
 

@@ -142,8 +142,12 @@ class Main:
             print(f"{e}")
 
     def view_cart(self):
-        print(self.customer.view_cart())
-        self.access_dashboard()
+        try:
+            print(self.customer.view_cart())
+            self.access_dashboard()
+        except ValueError as e:
+            print(f"{e}")
+
 
     def place_an_order(self):
         book_id = input("Enter the book id: ")
